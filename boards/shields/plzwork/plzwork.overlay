@@ -1,12 +1,18 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "plzwork-layouts.dtsi"
 
 &pro_micro {
     // optional label
 };
 
+&physical_layout0 {
+    transform = <&transform0>;
+};
+
 / {
     chosen {
         zmk,kscan = &kscan0;
+        zmk,physical-layout = &physical_layout0;
     };
 
     kscan0: kscan {
