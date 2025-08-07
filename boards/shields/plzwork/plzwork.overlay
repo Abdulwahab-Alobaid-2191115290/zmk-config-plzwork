@@ -4,10 +4,6 @@
     // optional label
 };
 
-&physical_layout0 {
-    transform = <&transform0>;
-};
-
 / {
     chosen {
         zmk,kscan = &kscan0;
