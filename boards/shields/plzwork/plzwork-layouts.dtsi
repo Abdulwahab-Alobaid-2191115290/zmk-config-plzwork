@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2025
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <physical_layouts.dtsi>
+
+ / {
+    plzwork_position_map {
+        compatible = "zmk,physical-layout-position-map";
+        complete;
+
+        // Connects to the layout transform
+        pinout_map: pinout_positions {
+            physical-layout = <&physical_layout0>;
+            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17>;
+        };
+    };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Pro Micro Inline";
+
+        // Simple inline layout: 18 keys in a row
+        keys =
+            <&key_physical_attrs 100 100    0    0    0    0    0>   // 0
+          , <&key_physical_attrs 100 100  100    0    0    0    0>   // 1
+          , <&key_physical_attrs 100 100  200    0    0    0    0>   // 2
+          , <&key_physical_attrs 100 100  300    0    0    0    0>   // 3
+          , <&key_physical_attrs 100 100  400    0    0    0    0>   // 4
+          , <&key_physical_attrs 100 100  500    0    0    0    0>   // 5
+          , <&key_physical_attrs 100 100  600    0    0    0    0>   // 6
+          , <&key_physical_attrs 100 100  700    0    0    0    0>   // 7
+          , <&key_physical_attrs 100 100  800    0    0    0    0>   // 8
+          , <&key_physical_attrs 100 100  900    0    0    0    0>   // 9
+          , <&key_physical_attrs 100 100 1000    0    0    0    0>   // 10
+          , <&key_physical_attrs 100 100 1100    0    0    0    0>   // 11
+          , <&key_physical_attrs 100 100 1200    0    0    0    0>   // 12
+          , <&key_physical_attrs 100 100 1300    0    0    0    0>   // 13
+          , <&key_physical_attrs 100 100 1400    0    0    0    0>   // 14
+          , <&key_physical_attrs 100 100 1500    0    0    0    0>   // 15
+          , <&key_physical_attrs 100 100 1600    0    0    0    0>   // 16
+          , <&key_physical_attrs 100 100 1700    0    0    0    0>   // 17
+            ;
+    };
+};
